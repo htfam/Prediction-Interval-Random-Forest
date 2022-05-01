@@ -9,7 +9,7 @@
 
 library(doParallel)
 
-ISU.RFpi = function(rf, train.dat, train.y, test.dat = train.dat, alpha = 0.85) {
+RFpi = function(rf, train.dat, train.y, test.dat = train.dat, alpha = 0.85) {
   clusters <- makeCluster(detectCores())
   registerDoParallel(clusters)
   if (is.null(rf$inbag.counts)) {
